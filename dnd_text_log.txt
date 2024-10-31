@@ -452,3 +452,70 @@ Recent activity: ['Three old lady wizards are excitedly stockpiling ingredients 
 2024-10-27 23:25:43,612 - INFO - Final audio saved: recording_1730071543.wav
 2024-10-27 23:25:49,712 - INFO - Processing audio...
 2024-10-27 23:25:49,715 - INFO - Transcribing audio...
+2024-10-31 00:08:25,774 - INFO - Processing audio...
+2024-10-31 00:08:25,972 - INFO - Transcribing audio...
+2024-10-31 00:08:31,534 - INFO - Analyzing text for image...
+2024-10-31 00:08:31,535 - INFO - Analyzing text: Bruce and tartar tracking through a dense misty Forest the thug is fog is thick and visibility is lo...
+2024-10-31 00:08:31,535 - INFO - Final Corrected Transcription: Bruce and tartar tracking through a dense misty Forest the thug is fog is thick and visibility is low
+2024-10-31 00:08:31,536 - INFO - Current memory before update: {'characters': defaultdict(<class 'str'>, {}), 'items': defaultdict(<class 'str'>, {}), 'locations': defaultdict(<class 'str'>, {}), 'recent_activity_summary': ''}
+2024-10-31 00:08:33,542 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-31 00:08:33,550 - INFO - Raw AI response for memory update: Expected memory update:
+Characters: {'Bruce': 'Unknown description', 'Tartar': 'Unknown description'}
+Locations: {'Misty Forest': 'A dense forest with thick fog and low visibility.'}
+Recent activity: ['Bruce and Tartar are tracking through a dense, misty Forest with thick fog and low visibility.']
+2024-10-31 00:08:33,551 - INFO - Memory updated, preparing to generate image.
+2024-10-31 00:08:33,551 - INFO - Sending prompt to OpenAI: You are an AI art companion for a Dungeons and Dragons game. Please generate a detailed scene based on recent transcription and memory details:
+
+Recent Transcription: Bruce and tartar tracking through...
+2024-10-31 00:08:35,898 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-31 00:08:35,900 - INFO - Raw AI response: As Bruce and Tartar continue to track through the dense, misty Forest, the thick fog envelops them, reducing visibility to a mere few feet ahead. The damp ground beneath their feet is covered in a layer of moss and fallen leaves, crunching softly with each step they take. The trees loom overhead, their branches twisted and tangled, casting eerie shadows that seem to dance in the fog.
+
+Bruce, with his sturdy frame and determined stride, leads the way through the misty forest, his senses on high alert for any signs of danger. Tartar, his companion, follows close behind, his sharp eyes scanning the surrounding landscape for any hints of movement.
+
+As they push deeper into the forest, the sounds of wildlife grow hushed and still, adding to the tension that hangs heavy in the air. The mist swirls around them, thick and impenetrable, making it nearly impossible to see beyond their immediate surroundings. The atmosphere is charged with an unsettling energy, causing the hairs on the back of their necks to stand on end.
+
+Despite the challenges posed by the dense fog and low visibility, Bruce and Tartar press on with determination, their hearts filled with a fierce resolve to uncover the mysteries that lie hidden within the misty forest. As they continue their journey, a sense of foreboding settles over them, a whisper of danger lurking just beyond the fog-shrouded trees.
+2024-10-31 00:08:35,900 - WARNING - Unexpected response format: As Bruce and Tartar continue to track through the dense, misty Forest, the thick fog envelops them, reducing visibility to a mere few feet ahead. The damp ground beneath their feet is covered in a layer of moss and fallen leaves, crunching softly with each step they take. The trees loom overhead, their branches twisted and tangled, casting eerie shadows that seem to dance in the fog.
+
+Bruce, with his sturdy frame and determined stride, leads the way through the misty forest, his senses on high alert for any signs of danger. Tartar, his companion, follows close behind, his sharp eyes scanning the surrounding landscape for any hints of movement.
+
+As they push deeper into the forest, the sounds of wildlife grow hushed and still, adding to the tension that hangs heavy in the air. The mist swirls around them, thick and impenetrable, making it nearly impossible to see beyond their immediate surroundings. The atmosphere is charged with an unsettling energy, causing the hairs on the back of their necks to stand on end.
+
+Despite the challenges posed by the dense fog and low visibility, Bruce and Tartar press on with determination, their hearts filled with a fierce resolve to uncover the mysteries that lie hidden within the misty forest. As they continue their journey, a sense of foreboding settles over them, a whisper of danger lurking just beyond the fog-shrouded trees.
+2024-10-31 00:08:46,048 - INFO - Processing audio...
+2024-10-31 00:08:46,242 - INFO - Transcribing audio...
+2024-10-31 00:08:48,162 - INFO - Analyzing text for image...
+2024-10-31 00:08:48,162 - INFO - Analyzing text: the stumble upon an old abandoned cabin with a faint glow coming from inside...
+2024-10-31 00:08:48,163 - INFO - Final Corrected Transcription: the stumble upon an old abandoned cabin with a faint glow coming from inside
+2024-10-31 00:08:48,163 - INFO - Current memory before update: {'characters': defaultdict(<class 'str'>, {}), 'items': defaultdict(<class 'str'>, {}), 'locations': defaultdict(<class 'str'>, {}), 'recent_activity_summary': ''}
+2024-10-31 00:08:49,145 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-31 00:08:49,147 - INFO - Raw AI response for memory update: Characters: {}
+Items: {}
+Locations: {'Abandoned Cabin': 'An old cabin with a faint glow coming from inside.'}
+Recent activity: ['The party stumbles upon an old abandoned cabin with a faint glow coming from inside.']
+2024-10-31 00:08:49,148 - INFO - Memory updated, preparing to generate image.
+2024-10-31 00:08:49,148 - INFO - Sending prompt to OpenAI: You are an AI art companion for a Dungeons and Dragons game. Please generate a detailed scene based on recent transcription and memory details:
+
+Recent Transcription: the stumble upon an old abandoned...
+2024-10-31 00:08:53,538 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-31 00:08:53,540 - INFO - Raw AI response: As the players approach the old abandoned cabin, they notice a faint, eerie glow coming from inside. The cabin looks weathered and rundown, with vines creeping up the walls and moss covering the roof. The door creaks open as they cautiously enter, their footsteps echoing in the empty space.
+
+Inside, they find a room filled with dust and cobwebs, the furniture covered in a layer of grime. The glow seems to be coming from a small fireplace in the corner, where a few embers still burn faintly. The air is musty and stagnant, creating an unsettling atmosphere.
+
+As they explore further, they discover a pile of old books in the corner, their pages yellowed and fragile. The shelves are lined with mysterious trinkets and artifacts, each one whispering of untold stories and ancient magic. The players can't help but feel a sense of foreboding as they uncover the secrets hidden within the cabin.
+
+Suddenly, a faint whisper fills the air, sending shivers down their spines. The walls seem to close in around them, as if the cabin itself is alive and watching their every move. The players exchange nervous glances, unsure of what to do next in this haunted place.
+
+As they debate their next move, the glow flickers and fades, leaving them in darkness. The silence is deafening, broken only by the sound of their own breathing. With a jolt, the players realize they are not alone in the cabin. Shadows dance in the corners of the room, and a chill runs down their spines as they prepare for whatever may come next in this mysterious and dangerous place.
+2024-10-31 00:08:53,540 - WARNING - Unexpected response format: As the players approach the old abandoned cabin, they notice a faint, eerie glow coming from inside. The cabin looks weathered and rundown, with vines creeping up the walls and moss covering the roof. The door creaks open as they cautiously enter, their footsteps echoing in the empty space.
+
+Inside, they find a room filled with dust and cobwebs, the furniture covered in a layer of grime. The glow seems to be coming from a small fireplace in the corner, where a few embers still burn faintly. The air is musty and stagnant, creating an unsettling atmosphere.
+
+As they explore further, they discover a pile of old books in the corner, their pages yellowed and fragile. The shelves are lined with mysterious trinkets and artifacts, each one whispering of untold stories and ancient magic. The players can't help but feel a sense of foreboding as they uncover the secrets hidden within the cabin.
+
+Suddenly, a faint whisper fills the air, sending shivers down their spines. The walls seem to close in around them, as if the cabin itself is alive and watching their every move. The players exchange nervous glances, unsure of what to do next in this haunted place.
+
+As they debate their next move, the glow flickers and fades, leaving them in darkness. The silence is deafening, broken only by the sound of their own breathing. With a jolt, the players realize they are not alone in the cabin. Shadows dance in the corners of the room, and a chill runs down their spines as they prepare for whatever may come next in this mysterious and dangerous place.
+2024-10-31 00:08:55,707 - INFO - Final audio saved: recording_1730333335.wav
+2024-10-31 00:09:03,623 - INFO - Processing audio...
+2024-10-31 00:09:03,626 - INFO - Transcribing audio...

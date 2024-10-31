@@ -176,25 +176,25 @@ def analyze_text_for_image(text, memory_manager):
     corrected_transcription = context_aware_spell_check(corrected_text, dnd_vocab)
     logging.info(f"Final Corrected Transcription: {corrected_transcription}")
 
-    # Get current memory
+    # Get current memory state
     current_memory_table = memory_manager.get_memory()
     logging.info(f"Current memory before update: {current_memory_table}")
 
     try:
-        # Update memory
+        # Update memory based on transcription
         updated_memory_table = update_memory(corrected_transcription, memory_manager)
         if not isinstance(updated_memory_table, dict):
             logging.error("Expected updated_memory_table to be a dictionary.")
             return "none"
         
-        # Log comparison to check for differences
+        # Check for differences in memory to determine image generation
         if updated_memory_table == current_memory_table:
             logging.info("No changes detected, skipping image generation.")
             return "none"
         else:
             logging.info("Memory updated, preparing to generate image.")
 
-        # Image generation prompt
+        # Build the image prompt using updated memory
         image_prompt = (
             "You are an AI art companion for a Dungeons and Dragons game. "
             "Please generate a detailed scene based on recent transcription and memory details:\n\n"
@@ -207,23 +207,23 @@ def analyze_text_for_image(text, memory_manager):
         # Log the prompt being sent
         logging.info(f"Sending prompt to OpenAI: {image_prompt[:200]}...")
 
-        # Request from OpenAI, expecting a plain-text response
+        # Make the OpenAI API request
         response = client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[{"role": "user", "content": image_prompt}],
         )
 
-        # Treat response as plain text
+        # Process the AI's response
         ai_response = response.choices[0].message.content.strip()
         logging.info(f"Raw AI response: {ai_response}")
 
-        # Check for response content
+        # Determine action based on AI's response
         if "generate image" in ai_response.lower():
             prompt_start = ai_response.lower().find("generate image:") + len("generate image:")
             initial_prompt = ai_response[prompt_start:].strip()
             logging.info(f"Initial AI-generated prompt: {initial_prompt}")
 
-            # Enhance prompt with character descriptions
+            # Enhance prompt with character/item/location descriptions
             for name, description in updated_memory_table.get("characters", {}).items():
                 initial_prompt = initial_prompt.replace(name, f"{name} ({description})")
             for name, description in updated_memory_table.get("items", {}).items():

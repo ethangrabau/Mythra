@@ -28,9 +28,6 @@ logging.basicConfig(
 logging.getLogger().addHandler(file_handler)
 logging.getLogger().addHandler(stream_handler)
 
-# Initialize memory manager
-memory_manager = MemoryManager()
-
 # Define characters and pre-load them into long-term memory
 characters = {
     "Bruce": (
@@ -93,12 +90,23 @@ for transcription in transcriptions:
         correct_spelling(word, [item for sublist in dnd_vocabulary.values() for item in sublist])
         for word in words
     )
+
+    # Log the corrected transcription
+    logging.info(f"Processing corrected transcription: {corrected_transcription}")
     
-    logging.info(f"\nProcessing corrected transcription: {corrected_transcription}")
-    analyze_text_for_image(corrected_transcription, memory_manager)
+    # Analyze the transcription for image generation
+    image_prompt = analyze_text_for_image(corrected_transcription, memory_manager)
+
+    # Log the memory and the final prompt for image generation
+    logging.info(f"Current memory for this transcription: {memory_manager.get_memory()}")
+    if image_prompt != "none":
+        logging.info(f"Image generation prompt sent to Flux: {image_prompt}")
+    else:
+        logging.info("No image generation needed for this transcription.")
+    
     # Flush logs after each transcription analysis
     file_handler.flush()
-    time.sleep(2)  # Simulate delay
+    time.sleep(2)  # Simulate delay for testing
 
 logging.info("Test script complete.")
 file_handler.flush()  # Final flush to ensure complete log output
